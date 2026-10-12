@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun pkt () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  (_ bv5 32) (concat  (select  pkt (_ bv3 32) ) (concat  (select  pkt (_ bv2 32) ) (concat  (select  pkt (_ bv1 32) ) (select  pkt (_ bv0 32) ) ) ) ) ) )
+(check-sat)
+(exit)

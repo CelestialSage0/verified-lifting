@@ -1,0 +1,52 @@
+version: 1
+creator: klee
+pid: 34
+cmd: test.bc
+
+
+positions: instr line
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+events: Icov Forks Ireal Itime I UCdist Rtime States Iuncov Q Qiv Qv Qtime 
+ob=assembly.ll
+fn=process
+13 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+14 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+15 0 1 0 0 0 1 0 0 0 0 1 0 0 0 
+16 0 1 0 0 0 1 0 0 0 0 1 0 0 0 
+17 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+18 0 1 0 0 0 1 0 0 0 0 1 0 0 0 
+19 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+20 0 1 0 0 0 1 0 0 0 0 1 0 0 0 
+21 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+22 0 1 0 0 0 1 0 0 0 0 1 0 0 0 
+23 0 1 0 0 0 1 0 0 0 0 1 0 0 0 
+24 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+25 0 1 0 0 0 1 0 0 0 0 1 0 0 0 
+26 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+27 0 1 1 0 0 1 0 0 0 0 1 2 0 5182 
+30 0 1 0 0 0 1 0 0 0 0 1 0 0 0 
+31 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+34 0 1 0 0 0 1 0 0 0 0 1 0 0 0 
+35 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+38 0 1 0 0 0 2 0 0 0 0 2 0 0 0 
+39 0 1 0 0 0 2 0 0 0 0 0 0 0 0 
+fn=main
+45 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+46 0 1 0 0 0 1 0 0 0 0 2 0 0 0 
+47 0 1 0 0 0 1 0 0 0 0 0 0 0 0 
+cfn=process
+calls=1 10 0
+47 0 21 1 0 0 23 0 0 0 0 12 2 0 5182 
+48 0 1 0 0 0 2 0 0 0 0 2 0 0 0 
